@@ -521,6 +521,23 @@ em, .italic { font-style: italic; }
 .contact__list a:hover { text-decoration: underline; text-decoration-color: var(--rose); text-underline-offset: 4px; }
 @media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: var(--space-12); } .form__row { grid-template-columns: 1fr; } }
 
+/* ---------- Follow Along (home) ---------- */
+.section--flush-top { padding-top: 0; }
+.follow__inner { text-align: center; max-width: 760px; }
+.follow__inner h2 { margin-bottom: var(--space-4); }
+.follow__inner .lede { margin: 0 auto var(--space-8); max-width: 56ch; }
+.follow__links { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-8); }
+.follow__link { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--heading); }
+.follow__icon {
+  width: 72px; height: 72px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--burgundy); color: var(--burgundy); background: var(--paper);
+  transition: background-color .25s var(--ease), color .25s var(--ease);
+}
+.follow__icon svg { width: 28px; height: 28px; }
+.follow__link:hover .follow__icon, .follow__link:focus-visible .follow__icon { background: var(--burgundy); color: var(--on-burgundy); }
+.follow__name { font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
+
 /* ---------- Contact Us ---------- */
 .contact-us__inner { max-width: 640px; text-align: center; }
 .contact-us__title {
