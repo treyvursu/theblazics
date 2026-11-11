@@ -521,6 +521,22 @@ em, .italic { font-style: italic; }
 .contact__list a:hover { text-decoration: underline; text-decoration-color: var(--rose); text-underline-offset: 4px; }
 @media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: var(--space-12); } .form__row { grid-template-columns: 1fr; } }
 
+/* ---------- Contact Us ---------- */
+.contact-us__inner { max-width: 640px; text-align: center; }
+.contact-us__title {
+  font-family: var(--font-text); font-weight: 600; font-size: clamp(30px, 4vw, 40px); line-height: 1.15;
+  letter-spacing: 0.02em; color: var(--heading); margin-bottom: var(--space-3);
+}
+.contact-us__sub {
+  font-family: var(--font-display); font-style: italic; font-size: clamp(20px, 2.4vw, 24px); line-height: 1.4;
+  color: var(--rose-ink); margin: 0 auto var(--space-8); max-width: none;
+}
+.contact-us__sub span { display: block; }
+.contact-us { scroll-margin-top: 96px; }
+@media (min-width: 1024px) { .contact-us { scroll-margin-top: 136px; } }
+.contact-us__form { text-align: left; }
+.contact-us__form .btn { width: 100%; }
+
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--hairline); padding: var(--space-16) 0 var(--space-8); text-align: center; }
 .footer__logo { background: var(--logo-ground); display: inline-block; padding: var(--space-8); margin-bottom: var(--space-8); }
