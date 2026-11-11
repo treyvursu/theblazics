@@ -10,6 +10,7 @@
 @font-face { font-family: "Playfair Display"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/playfair-display-latin-400-italic.woff2") format("woff2"); }
 @font-face { font-family: "Jost"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/jost-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "Jost"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/jost-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/jost-latin-600-normal.woff2") format("woff2"); }
 
 :root {
   /* Palette (from the guide) */
@@ -299,6 +300,7 @@ em, .italic { font-style: italic; }
   transition: background-size .3s var(--ease);
 }
 .nav__links a:hover, .nav__links a[aria-current="page"] { background-size: 100% 1px; }
+.nav__links a.nav-home { font-weight: 600; color: var(--heading); }
 
 .mobile-menu {
   display: none;
