@@ -618,3 +618,14 @@ em, .italic { font-style: italic; }
 .footer__verse span { display: block; margin-top: var(--space-2); font-family: var(--font-text); font-style: normal; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; }
 .br-wide { display: none; }
 @media (min-width: 720px) { .br-wide { display: inline; } }
+/* About: story left, people column right */
+.about-split { display: grid; gap: var(--space-12); }
+.about-split__story h1 { margin-bottom: var(--space-8); }
+.about-split__people { display: grid; gap: var(--space-8); align-content: start; }
+.about-split__people .person h3 { font-size: 32px; line-height: 38px; }
+.about-split__people .person__body { padding: var(--space-6); }
+.divider--left { justify-content: flex-start; margin-left: 0; margin-right: 0; max-width: none; }
+.divider--left::before { display: none; }
+@media (min-width: 900px) {
+  .about-split { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--space-16); }
+}
