@@ -71,6 +71,8 @@ Use clean, root-relative URLs: `/bakes`, `/handmade`, `/gift-wrap`, `/about`, `/
 2. In the HTML, find the placeholder with that `data-image` path. Replace its inner `<div class="ph__inner">…</div>` with `<img src="/assets/images/<name>.webp" alt="What the photo shows" loading="lazy" width="W" height="H">`. Use the real pixel size for width and height.
 3. Drop `loading="lazy"` only for the big banner photo at the top of a page.
 
+**Instagram or Pinterest on the home page.** `public/index.html`, section `#follow` ("Follow Along"). Each has a ready-made icon block inside an HTML comment. Paste the profile link in place of `#`, remove the comment markers, and the icon appears next to Facebook. Also add the link to the footer icons, the contact sections and `sameAs` in the home page JSON-LD.
+
 **FAQ.** `public/index.html`, section `#faq`. The visible questions and the `FAQPage` JSON-LD in `<head>` must match word for word. Edit both.
 
 **Sitemap.** Adding a page means adding it to `public/sitemap.xml` and `public/llms.txt`. Update `<lastmod>` when a page changes meaningfully.
