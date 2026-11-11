@@ -29,7 +29,7 @@ public/              everything served on the site
   about.html         About (/about)
   404.html           Not found page
   css/styles.css     all styles; brand tokens at the top
-  js/main.js         menu, theme toggle, scroll reveal, order form
+  js/main.js         menu, scroll reveal, order form
   fonts/             self-hosted Jost and Playfair Display
   assets/Logos/      logos (WebP) and og-image.jpg for link previews
   assets/images/     photos
@@ -42,15 +42,15 @@ vercel.json          Vercel config
 These are copied into all six HTML files (the five pages plus 404.html). A change to one means the same change in all of them:
 
 - Announcement bar (`.announce`)
-- Header (menu button left, BC logo center, theme toggle right) and mobile menu
+- Header (menu button left on phones, BC logo center) and mobile menu
 - Order section (`#order` / `#preorder`) and its form
 - Footer
 
 ## Navigation
 
-Desktop (1024px and up): Home, About Us, Blazic Bakes on the left of the header. BC logo in the center. Blazic Handmade, Blazic Gift Wrap and the theme toggle on the right.
+Desktop (1024px and up): Home, About Us, Blazic Bakes on the left of the header. BC logo in the center. Blazic Handmade, Blazic Gift Wrap and Contact on the right. There is no light/dark toggle; the site follows the visitor's system setting. Between 1024px and 1199px the header uses tighter spacing so the logo stays centered; check that width after adding a link.
 
-Phone menu (the 3-line button, top left): Home, About Us, Blazic Bakes, Blazic Handmade, Blazic Gift Wrap, Contact. Contact points to `#order` (`/#order` on the 404 page).
+Phone menu (the 3-line button, top left): Home, About Us, Blazic Bakes, Blazic Handmade, Blazic Gift Wrap, Contact. Contact points to `#order` in both places (`/#order` on the 404 page).
 
 The current page's link gets `aria-current="page"` in both places.
 
