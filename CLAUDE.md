@@ -4,6 +4,10 @@ Live at https://theblazics.com. Plain HTML, CSS and a little JavaScript. No fram
 
 Two people edit this repo with Claude: Trey and Brittani. Keep it simple enough that either one can ask for a change in plain English.
 
+## This repo is public
+
+Anyone can read every file and commit here. Never commit customer names, orders, phone numbers, home address, school names, passwords, API keys or anything else that isn't already meant for the public site. Keep that kind of information out of the repo entirely.
+
 ## Before every edit
 
 1. `git pull` first. The other person may have pushed since your last session.

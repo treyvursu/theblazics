@@ -6,7 +6,7 @@ The Blazic Collective website. Monticello, Indiana. Static HTML, CSS and JS. Edi
 
 | Piece | Where |
 |---|---|
-| Code | GitHub, `treyvursu/theblazics` (private) |
+| Code | GitHub, `treyvursu/theblazics` (public. Everything in it is already public on the site) |
 | Hosting | Vercel, project `theblazics` in the Vursu team (Pro) |
 | Config | `vercel.json` (output folder, clean URLs, headers) |
 | Domain | Registered at Namecheap. DNS at Namecheap: A `@` and CNAME `www` point to Vercel |
