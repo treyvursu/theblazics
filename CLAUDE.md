@@ -29,7 +29,7 @@ public/              everything served on the site
   about.html         About (/about)
   404.html           Not found page
   css/styles.css     all styles; brand tokens at the top
-  js/main.js         menu, scroll reveal, order form
+  js/main.js         menu, scroll reveal, contact form
   fonts/             self-hosted Jost and Playfair Display
   assets/Logos/      logos (WebP) and og-image.jpg for link previews
   assets/images/     photos
@@ -43,20 +43,20 @@ These are copied into all six HTML files (the five pages plus 404.html). A chang
 
 - Announcement bar (`.announce`)
 - Header (menu button left on phones, BC logo center) and mobile menu
-- Order section (`#order` / `#preorder`) and its form
+- Contact Us section (`#contact`) and its form: Name, Email, Message
 - Footer
 
 ## Navigation
 
 Desktop (1024px and up): Home, About Us, Blazic Bakes on the left of the header. BC logo in the center. Blazic Handmade, Blazic Gift Wrap and Contact on the right. There is no light/dark toggle; the site follows the visitor's system setting. Between 1024px and 1199px the header uses tighter spacing so the logo stays centered; check that width after adding a link.
 
-Phone menu (the 3-line button, top left): Home, About Us, Blazic Bakes, Blazic Handmade, Blazic Gift Wrap, Contact. Contact points to `#order` in both places (`/#order` on the 404 page).
+Phone menu (the 3-line button, top left): Home, About Us, Blazic Bakes, Blazic Handmade, Blazic Gift Wrap, Contact. Contact points to `#contact` in both places (`/#contact` on the 404 page).
 
 The current page's link gets `aria-current="page"` in both places.
 
 ## Links
 
-Use clean, root-relative URLs: `/bakes`, `/handmade`, `/gift-wrap`, `/about`, `/#order`. Never `bakes.html`. The host serves the `.html` file at the clean path.
+Use clean, root-relative URLs: `/bakes`, `/handmade`, `/gift-wrap`, `/about`, `/#contact`. Never `bakes.html`. The host serves the `.html` file at the clean path.
 
 ## Common edits
 
@@ -112,4 +112,4 @@ Then open the URL it prints. Clean URLs like `/bakes` work the same as on Vercel
 - Prices and product details on every card.
 - Pickup times and place on `/bakes`.
 - Higher-resolution logo exports (current files are about 600px wide and look soft on retina screens at full size).
-- Order form opens the visitor's email app. Swap to a form service (Formspree or similar) to receive submissions directly: set the form's `action`, remove `data-mailto`.
+- Contact form opens the visitor's email app addressed to hello@theblazics.com (which forwards to the business Gmail). To receive submissions directly, connect a form service such as Web3Forms: set the form's `action` and access key, remove `data-mailto`, in every page.
