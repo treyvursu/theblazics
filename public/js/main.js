@@ -1,9 +1,5 @@
 // The Blazic Collective — small site behaviours (no dependencies)
 (function () {
-  var root = document.documentElement;
-
-  // Saved theme is applied by the inline script in <head> to avoid a flash.
-
   // Loaded with defer, so the DOM is ready when this runs.
   (function () {
     // Sticky header hairline after scrolling
@@ -33,17 +29,6 @@
         });
       });
     }
-
-    // Theme toggle
-    document.querySelectorAll('.theme-toggle').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var current = root.getAttribute('data-theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var next = current === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem('blazic-theme', next); } catch (e) {}
-      });
-    });
 
     // Reveal on scroll
     var items = document.querySelectorAll('.reveal');
