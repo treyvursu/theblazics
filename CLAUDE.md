@@ -108,7 +108,7 @@ Then open the URL it prints. Clean URLs like `/bakes` work the same as on Vercel
 
 - My Fave Things page: planned, not built yet. When it is, add it to the phone menu after Contact, `sitemap.xml` and `llms.txt`.
 
-- Instagram and Facebook links (currently `#`).
+- Instagram link (currently `#` and "@blazic (to add)"). Facebook is done: footer icon, contact list and `sameAs` in the home page Organization JSON-LD. Add Instagram to all three when it exists.
 - Prices and product details on every card.
 - Pickup times and place on `/bakes`.
 - Higher-resolution logo exports (current files are about 600px wide and look soft on retina screens at full size).
