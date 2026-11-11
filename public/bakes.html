@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/assets/Logos/favicon.png">
 <link rel="preload" href="/fonts/playfair-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('blazic-theme');if(t)d.setAttribute('data-theme',t)}catch(e){}})(document.documentElement)</script>
+<script>document.documentElement.classList.add('js');try{localStorage.removeItem('blazic-theme')}catch(e){}</script>
 <link rel="stylesheet" href="/css/styles.css">
 <script src="/js/main.js" defer></script>
 <script type="application/ld+json">
@@ -114,7 +114,6 @@
     <a class="brand-logo" href="/" aria-label="The Blazic Collective, home"><img src="/assets/Logos/blazic-collective-header.webp" alt="The Blazic Collective" width="524" height="504"></a>
     <div class="nav__side nav__side--right">
       <nav aria-label="Lines"><ul class="nav__links"><li><a href="/handmade">Blazic Handmade</a></li><li><a href="/gift-wrap">Blazic Gift Wrap</a></li><li><a href="#order">Contact</a></li></ul></nav>
-      <button class="theme-toggle" type="button" aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
     </div>
   </div>
   <div class="mobile-menu" id="mobile-menu">
