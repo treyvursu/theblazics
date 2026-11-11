@@ -629,3 +629,5 @@ em, .italic { font-style: italic; }
 @media (min-width: 900px) {
   .about-split { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--space-16); }
 }
+#how-it-works .steps { border: 0; gap: var(--space-8); }
+#how-it-works .step { border: 0; padding: 0; text-align: center; }
