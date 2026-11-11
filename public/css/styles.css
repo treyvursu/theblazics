@@ -614,3 +614,5 @@ em, .italic { font-style: italic; }
   --hairline: #DCCFBF; --focus: #8F4A48;
   color: var(--ink);
 }
+.footer__verse { max-width: 46ch; margin: var(--space-8) auto var(--space-4); font-family: var(--font-display); font-style: italic; font-size: 15px; line-height: 1.6; color: var(--ink-muted); text-align: center; }
+.footer__verse span { display: block; margin-top: var(--space-2); font-family: var(--font-text); font-style: normal; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; }
