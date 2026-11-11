@@ -65,19 +65,17 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var data = new FormData(form);
-        var subject = 'Order request: ' + (data.get('line') || 'General');
+        var subject = 'Website message from ' + (data.get('name') || 'a visitor');
         var body = [
           'Name: ' + (data.get('name') || ''),
           'Email: ' + (data.get('email') || ''),
-          'Line: ' + (data.get('line') || ''),
-          'Date needed: ' + (data.get('date') || ''),
           '',
           data.get('message') || ''
         ].join('\n');
         window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
           '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         var status = form.querySelector('.form__status');
-        if (status) status.textContent = 'Your email app should open with the request filled in.';
+        if (status) status.textContent = 'Your email app should open with your message filled in. Hit send there to finish.';
       });
     });
   })();
