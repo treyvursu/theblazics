@@ -634,3 +634,5 @@ em, .italic { font-style: italic; }
 #menu .products, #pieces .products { display: flex; flex-wrap: wrap; justify-content: center; }
 #menu .products .card, #pieces .products .card { flex: 0 1 calc((100% - 2 * var(--space-6)) / 3); min-width: 240px; }
 @media (max-width: 640px) { #menu .products .card, #pieces .products .card { flex-basis: 100%; } }
+.price small { font-size: 12px; font-weight: 400; letter-spacing: .04em; color: var(--ink-muted); }
+.card__bulk { margin: calc(var(--space-2) * -1) 0 var(--space-3); font-size: 13px; letter-spacing: .04em; color: var(--rose); }
