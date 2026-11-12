@@ -537,9 +537,9 @@ em, .italic { font-style: italic; }
 }
 .follow__icon svg { width: 28px; height: 28px; }
 .follow__link:hover .follow__icon, .follow__link:focus-visible .follow__icon { background: var(--burgundy); color: var(--on-burgundy); }
-.follow__markets { margin-top: var(--space-12); padding-top: var(--space-12); border-top: 1px solid var(--chrome-line); }
-.follow__markets h3 { margin: var(--space-2) 0 var(--space-4); }
-.follow__markets p { margin: 0 0 var(--space-2); }
+.follow__markets { margin-top: var(--space-12); max-width: 960px; }
+.follow__markets .highlight { grid-template-columns: auto 1fr; background: var(--paper-raised); padding: var(--space-12) var(--space-16); gap: var(--space-12); }
+@media (max-width: 760px) { .follow__markets .highlight { grid-template-columns: 1fr; padding: var(--space-8) var(--space-6); gap: var(--space-4); } }
 .follow__name { font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
 
 /* ---------- Contact Us ---------- */
