@@ -629,8 +629,8 @@ em, .italic { font-style: italic; }
 @media (min-width: 900px) {
   .about-split { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--space-16); }
 }
-#how-it-works .steps { border: 0; gap: var(--space-8); }
-#how-it-works .step { border: 0; padding: 0; text-align: center; }
+#how-it-works .steps, #how .steps { border: 0; gap: var(--space-8); }
+#how-it-works .step, #how .step { border: 0; padding: 0; text-align: center; }
 #menu .products, #pieces .products { display: flex; flex-wrap: wrap; justify-content: center; }
 #menu .products .card, #pieces .products .card { flex: 0 1 calc((100% - 2 * var(--space-6)) / 3); min-width: 240px; }
 @media (max-width: 640px) { #menu .products .card, #pieces .products .card { flex-basis: 100%; } }
