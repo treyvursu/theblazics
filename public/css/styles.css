@@ -183,24 +183,22 @@ em, .italic { font-style: italic; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
   font-family: var(--font-text);
-  font-size: 12px; line-height: 16px; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.2em;
+  font-size: 14px; line-height: 18px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.14em;
   text-decoration: none;
   padding: var(--space-3) var(--space-6);
   min-height: 48px;
   border-radius: var(--radius-none);
-  border: 1px solid var(--burgundy);
+  border: 2px solid var(--burgundy);
   cursor: pointer;
   transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
 }
 .btn--primary { background: var(--burgundy); color: var(--on-burgundy); }
 .btn--primary:hover { background: var(--burgundy-deep); border-color: var(--burgundy-deep); }
-.btn--secondary { background: transparent; color: var(--heading); }
-.btn--secondary:hover { background: var(--blush); }
-:root[data-theme="dark"] .btn--secondary { border-color: var(--ink-muted); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--secondary { border-color: var(--ink-muted); } }
-.btn .arrow { transition: transform .3s var(--ease); }
-.btn:hover .arrow { transform: translateX(4px); }
+.btn--secondary { background: var(--paper); color: var(--burgundy); }
+.btn--secondary:hover { background: var(--burgundy); color: var(--on-burgundy); }
+:root[data-theme="dark"] .btn--secondary { border-color: var(--heading); color: var(--heading); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--secondary { border-color: var(--heading); color: var(--heading); } }
 .btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center; }
 
 .link {
@@ -642,3 +640,5 @@ em, .italic { font-style: italic; }
 .package h3 { font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 34px; color: var(--heading); margin: var(--space-3) 0 var(--space-3); }
 .package p { margin: 0; color: var(--ink-muted); }
 .packages__note { max-width: 60ch; margin: var(--space-12) auto 0; text-align: center; color: var(--ink-muted); }
+:root[data-theme="dark"] .btn--primary { background: #F3E4E2; color: #4A0B10; border-color: #F3E4E2; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--primary { background: #F3E4E2; color: #4A0B10; border-color: #F3E4E2; } :root:not([data-theme="light"]) .btn--primary:hover { background: #FCFCF8; border-color: #FCFCF8; } }
