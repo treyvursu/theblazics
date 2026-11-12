@@ -526,7 +526,7 @@ em, .italic { font-style: italic; }
 .section--flush-top { padding-top: 0; }
 .follow__inner { text-align: center; max-width: 760px; }
 .follow__inner h2 { margin-bottom: var(--space-4); }
-.follow__inner .lede { margin: 0 auto var(--space-8); max-width: 56ch; }
+.follow__inner .lede { margin: 0 auto; max-width: 56ch; }
 .follow__links { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-8); }
 .follow__link { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--heading); }
 .follow__icon {
@@ -537,8 +537,8 @@ em, .italic { font-style: italic; }
 }
 .follow__icon svg { width: 28px; height: 28px; }
 .follow__link:hover .follow__icon, .follow__link:focus-visible .follow__icon { background: var(--burgundy); color: var(--on-burgundy); }
-.follow__markets { margin-top: var(--space-12); max-width: 960px; }
-.follow__markets .highlight { grid-template-columns: auto 1fr; background: var(--paper-raised); padding: var(--space-12) var(--space-16); gap: var(--space-12); }
+.follow__markets { margin-top: var(--space-8); max-width: 960px; }
+.follow__markets .highlight { grid-template-columns: auto 1fr auto; background: var(--paper-raised); padding: var(--space-12) var(--space-12); gap: var(--space-8); }
 @media (max-width: 760px) { .follow__markets .highlight { grid-template-columns: 1fr; padding: var(--space-8) var(--space-6); gap: var(--space-4); } }
 .follow__name { font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
 
