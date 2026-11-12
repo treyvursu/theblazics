@@ -669,4 +669,3 @@ em, .italic { font-style: italic; }
 .kits .card__body { padding: var(--space-4); }
 .kits .card__name { font-size: 19px; line-height: 24px; }
 @media (max-width: 760px) { .kits .products { gap: var(--space-3); } .kits .card { flex: 0 1 calc(50% - var(--space-3)); } }
-.kits__feature { max-width: 360px; margin: 0 auto var(--space-12); }
