@@ -637,3 +637,8 @@ em, .italic { font-style: italic; }
 .price small { font-size: 12px; font-weight: 400; letter-spacing: .04em; color: var(--ink-muted); }
 .card__bulk { margin: calc(var(--space-2) * -1) 0 var(--space-3); font-size: 13px; letter-spacing: .04em; color: var(--rose); }
 .contact-us__where { margin: calc(var(--space-4) * -1) 0 var(--space-8); text-align: center; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-muted); }
+.packages { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.package { background: var(--paper); border: 1px solid var(--hairline); padding: var(--space-8) var(--space-6); text-align: center; }
+.package h3 { font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 34px; color: var(--heading); margin: var(--space-3) 0 var(--space-3); }
+.package p { margin: 0; color: var(--ink-muted); }
+.packages__note { max-width: 60ch; margin: var(--space-12) auto 0; text-align: center; color: var(--ink-muted); }
