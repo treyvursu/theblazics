@@ -662,4 +662,4 @@ em, .italic { font-style: italic; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--primary { background: #F3E4E2; color: #4A0B10; border-color: #F3E4E2; } :root:not([data-theme="light"]) .btn--primary:hover { background: #FCFCF8; border-color: #FCFCF8; } }
 .ph:has(> img) { border: 0; background: none; }
 .ph:has(> img)::before { display: none; }
-.about-family { max-width: 640px; margin-inline: auto; }
+.about-family { max-width: 420px; margin-inline: auto; }
