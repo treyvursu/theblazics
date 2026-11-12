@@ -25,110 +25,6 @@
 <script>document.documentElement.classList.add('js');try{localStorage.removeItem('blazic-theme')}catch(e){}</script>
 <link rel="stylesheet" href="/css/styles.css">
 <script src="/js/main.js" defer></script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "WebPage",
-   "url": "https://theblazics.com/bakes",
-   "name": "Blazic Bakes",
-   "about": {
-    "@id": "https://theblazics.com/#org"
-   },
-   "mainEntity": {
-    "@type": "OfferCatalog",
-    "name": "Blazic Bakes menu",
-    "itemListElement": [
-     {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "FroDo", "description": "Frozen cookie dough. Piper makes the dough, you bake at home."}, "price": "10.00", "priceCurrency": "USD"},
-     {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cookie Butter Cookie", "description": "Weekly staple. Every Saturday."}, "price": "2.00", "priceCurrency": "USD"},
-     {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Nutella Stuffed Chocolate Chip", "description": "Weekly staple. Every Saturday."}, "price": "2.00", "priceCurrency": "USD"},
-     {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "OG Chocolate Chip with Brownie", "description": "Weekly staple. Every Saturday."}, "price": "2.00", "priceCurrency": "USD"},
-     {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Funfetti Sugar Cookie", "description": "Weekly staple. Every Saturday."}, "price": "2.00", "priceCurrency": "USD"}
-    ]
-   }
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
-    {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://theblazics.com/"
-    },
-    {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "Blazic Bakes",
-     "item": "https://theblazics.com/bakes"
-    }
-   ]
-  },
-  {
-   "@type": "FAQPage",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "How do I place an order?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Send a request through the contact form or email hello@theblazics.com with the line, the date you need it and what you would like. We reply with a confirmed date before anything is made."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "When are bake drops?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Bake drops go out every Saturday. Preorders can be placed any day. The menu has a few weekly staples and one combo cookie that changes each week."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Are handmade pieces in stock?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Handmade pieces are made to order. Each season there is also a small table of finished work at holiday markets."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Do you wrap gifts I already bought?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. Bring the gifts, boxed or not, and we wrap them by hand in paper and ribbon chosen for the person. Wrap season runs Thanksgiving to Christmas, so message early to check availability."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Where are you located?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "We are based in Monticello, Indiana. Message us to talk through pickup for your order."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Who makes everything?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Piper bakes, crafts and wraps everything herself. Brittani handles supplies, the books, the calendar and every pickup and drop-off."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "What comes with every order?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "A kraft tag stamped with the BC monogram and one line in Piper's handwriting."
-     }
-    }
-   ]
-  }
- ]
-}
-</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -139,7 +35,7 @@
     <nav class="nav__side nav__side--left" aria-label="Primary"><ul class="nav__links"><li><a href="/" class="nav-home">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/bakes" aria-current="page">Blazic Bakes</a></li></ul></nav>
     <a class="brand-logo" href="/" aria-label="The Blazic Collective, home"><img src="/assets/Logos/bc-header.webp" alt="The Blazic Collective" width="524" height="504"></a>
     <div class="nav__side nav__side--right">
-      <nav aria-label="Lines"><ul class="nav__links"><li><a href="/handmade">Blazic Handmade</a></li><li><a href="/gift-wrap">Blazic Gift Wrap</a></li><li><a href="/#contact">Contact</a></li></ul></nav>
+      <nav aria-label="Lines"><ul class="nav__links"><li><a href="/handmade">Blazic Handmade</a></li><li><a href="/gift-wrap">Blazic Gift Wrap</a></li><li><a href="#contact">Contact</a></li></ul></nav>
     </div>
   </div>
   <div class="mobile-menu" id="mobile-menu">
@@ -149,7 +45,7 @@
       <li><a href="/bakes" aria-current="page">Blazic Bakes</a></li>
       <li><a href="/handmade">Blazic Handmade</a></li>
       <li><a href="/gift-wrap">Blazic Gift Wrap</a></li>
-      <li><a href="/#contact">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul></div>
   </div>
 </header>
@@ -253,21 +149,17 @@
   </div>
 </section>
 
-<section class="section" id="faq">
-  <div class="container" style="max-width:800px">
-    <div class="section-head reveal">
-      <div class="divider"><span class="eyebrow">Questions</span></div>
-      <h2 class="display-lg">Good to know.</h2>
-    </div>
-    <div class="faq reveal">
-      <details class="faq__item"><summary><h3>How do I place an order?</h3></summary><p>Send a request through the contact form or email hello@theblazics.com with the line, the date you need it and what you would like. We reply with a confirmed date before anything is made.</p></details>
-      <details class="faq__item"><summary><h3>When are bake drops?</h3></summary><p>Bake drops go out every Saturday. Preorders can be placed any day. The menu has a few weekly staples and one combo cookie that changes each week.</p></details>
-      <details class="faq__item"><summary><h3>Are handmade pieces in stock?</h3></summary><p>Handmade pieces are made to order. Each season there is also a small table of finished work at holiday markets.</p></details>
-      <details class="faq__item"><summary><h3>Do you wrap gifts I already bought?</h3></summary><p>Yes. Bring the gifts, boxed or not, and we wrap them by hand in paper and ribbon chosen for the person. Wrap season runs Thanksgiving to Christmas, so message early to check availability.</p></details>
-      <details class="faq__item"><summary><h3>Where are you located?</h3></summary><p>We are based in Monticello, Indiana. Message us to talk through pickup for your order.</p></details>
-      <details class="faq__item"><summary><h3>Who makes everything?</h3></summary><p>Piper bakes, crafts and wraps everything herself. Brittani handles supplies, the books, the calendar and every pickup and drop-off.</p></details>
-      <details class="faq__item"><summary><h3>What comes with every order?</h3></summary><p>A kraft tag stamped with the BC monogram and one line in Piper&#x27;s handwriting.</p></details>
-    </div>
+<section class="section section--raised contact-us" id="contact">
+  <div class="container contact-us__inner reveal">
+    <h2 class="contact-us__title">Contact Us</h2>
+    <p class="contact-us__sub"><span>Questions. Suggestions. Custom requests.</span> <span>We want to hear from you.</span></p>
+    <form class="form contact-us__form" data-mailto="hello@theblazics.com">
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+      <div><button class="btn btn--primary" type="submit">Send message</button></div>
+      <p class="form__status" role="status"></p>
+    </form>
   </div>
 </section>
 
