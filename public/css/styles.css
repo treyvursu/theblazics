@@ -642,3 +642,5 @@ em, .italic { font-style: italic; }
 .packages__note { max-width: 60ch; margin: var(--space-12) auto 0; text-align: center; color: var(--ink-muted); }
 :root[data-theme="dark"] .btn--primary { background: #F3E4E2; color: #4A0B10; border-color: #F3E4E2; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn--primary { background: #F3E4E2; color: #4A0B10; border-color: #F3E4E2; } :root:not([data-theme="light"]) .btn--primary:hover { background: #FCFCF8; border-color: #FCFCF8; } }
+.ph:has(> img) { border: 0; background: none; }
+.ph:has(> img)::before { display: none; }
