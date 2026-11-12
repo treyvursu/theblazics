@@ -663,3 +663,9 @@ em, .italic { font-style: italic; }
 .ph:has(> img) { border: 0; background: none; }
 .ph:has(> img)::before { display: none; }
 .about-family { max-width: 420px; margin-inline: auto; }
+.kits .products { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4); max-width: none; }
+.kits .btn-row { margin-top: var(--space-12); }
+.kits .card { flex: 0 1 196px; }
+.kits .card__body { padding: var(--space-4); }
+.kits .card__name { font-size: 19px; line-height: 24px; }
+@media (max-width: 760px) { .kits .products { gap: var(--space-3); } .kits .card { flex: 0 1 calc(50% - var(--space-3)); } }
