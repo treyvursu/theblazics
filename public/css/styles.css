@@ -516,6 +516,9 @@ em, .italic { font-style: italic; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--burgundy); box-shadow: 0 0 0 1px var(--burgundy); }
 .form__note { font-size: 13px; line-height: 20px; color: var(--ink-muted); margin: 0; }
 .form__status { font-size: 14px; color: var(--sage-ink); margin: 0; min-height: 22px; }
+.form__status.is-error { color: var(--rose-ink); }
+/* Spam trap. Hidden from people, visible to bots. Do not remove. */
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .contact__list { list-style: none; padding: 0; margin: var(--space-8) 0 0; border-top: 1px solid var(--hairline); }
 .contact__list li { padding: var(--space-4) 0; border-bottom: 1px solid var(--hairline); display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
 .contact__list a { color: var(--heading); text-decoration: none; }

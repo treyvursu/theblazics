@@ -58,24 +58,50 @@
       el.textContent = new Date().getFullYear();
     });
 
-    // Contact form: opens the visitor's email app until a form service is connected.
-    // To use a form service (Formspree, Netlify Forms, etc.), set the form's
-    // action attribute and delete data-mailto.
-    document.querySelectorAll('form[data-mailto]').forEach(function (form) {
+    // Contact form. The form posts to /api/contact and works with JavaScript off.
+    // With JavaScript on, send it in the background and show any error in place.
+    var ERROR_TEXT = 'Sorry, that did not send. Please try again or email hello@theblazics.com.';
+    var showError = function (form) {
+      var status = form.querySelector('.form__status');
+      if (!status) return;
+      status.classList.add('is-error');
+      status.textContent = ERROR_TEXT;
+    };
+    var forms = document.querySelectorAll('form[action="/api/contact"]');
+
+    // Came back from a failed send with JavaScript off the first time
+    if (/[?&]error=1/.test(window.location.search)) {
+      forms.forEach(showError);
+    }
+
+    forms.forEach(function (form) {
+      if (!window.fetch || !window.FormData) return;
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        var data = new FormData(form);
-        var subject = 'Website message from ' + (data.get('name') || 'a visitor');
-        var body = [
-          'Name: ' + (data.get('name') || ''),
-          'Email: ' + (data.get('email') || ''),
-          '',
-          data.get('message') || ''
-        ].join('\n');
-        window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
-          '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        var button = form.querySelector('button[type="submit"]');
         var status = form.querySelector('.form__status');
-        if (status) status.textContent = 'Your email app should open with your message filled in. Hit send there to finish.';
+        var label = button ? button.textContent : '';
+        var data = new FormData(form);
+        var payload = {};
+        data.forEach(function (value, key) { payload[key] = value; });
+
+        if (button) { button.disabled = true; button.textContent = 'Sending'; }
+        if (status) { status.classList.remove('is-error'); status.textContent = ''; }
+
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+          .then(function (res) { return res.json().then(function (body) { return res.ok && body && body.ok; }); })
+          .then(function (sent) {
+            if (!sent) throw new Error('not sent');
+            window.location.href = '/thank-you';
+          })
+          .catch(function () {
+            if (button) { button.disabled = false; button.textContent = label; }
+            showError(form);
+          });
       });
     });
   })();

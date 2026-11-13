@@ -28,12 +28,14 @@ public/              everything served on the site
   gift-wrap.html     Blazic Gift Wrap (/gift-wrap)
   about.html         About (/about)
   404.html           Not found page
+  thank-you.html     Shown after the contact form sends (/thank-you). Not indexed, not in the sitemap
   css/styles.css     all styles; brand tokens at the top
-  js/main.js         menu, scroll reveal, contact form
+  js/main.js         menu, scroll reveal, contact form sending
   fonts/             self-hosted Jost and Playfair Display
   assets/Logos/      logos (WebP) and og-image.jpg for link previews
   assets/images/     photos
   sitemap.xml, robots.txt, llms.txt
+api/contact.js       Contact form handler (/api/contact). A Vercel Function, outside public/ on purpose
 vercel.json          Vercel config
 ```
 
@@ -43,8 +45,21 @@ These are copied into all six HTML files (the five pages plus 404.html). A chang
 
 - Announcement bar (`.announce`)
 - Header (menu button left on phones, BC logo center) and mobile menu
-- Contact Us section (`#contact`) and its form: Name, Email, Message
+- Contact Us section (`#contact`) and its form: Name, Email, Message, plus the hidden spam trap. Not every page has it. Search for `contact-us__form` to find them all.
 - Footer
+
+`thank-you.html` carries the same announcement bar, header, mobile menu and footer. Update it with the others.
+
+## Contact form
+
+The form posts to `/api/contact`. That function checks the fields, then sends the message through Resend to hello@theblazics.com, which forwards to the business Gmail. Reply in Gmail and it goes to the visitor. After a good send the visitor lands on `/thank-you`.
+
+- It works with JavaScript off (plain post, then a redirect). With JavaScript on, `main.js` sends it in the background and shows any error under the button.
+- The Resend API key is a Vercel environment variable named `RESEND_API_KEY` (project `theblazics`, Production and Preview). It is never in this repo. To rotate it, make a new key in Resend, replace the value in Vercel, redeploy.
+- Mail is sent from `forms@theblazics.com`. The domain is verified in the Vursu Resend account. hello@ is receive-only.
+- Each form has a hidden field named `company` inside `.form__hp`. It is a spam trap. People never see it. If it is filled in, the function says "sent" and sends nothing. Keep it in every form.
+- Length limits live in two places: `maxlength` on the inputs and `LIMITS` in `api/contact.js`. Change both.
+- Sends that fail are logged in Vercel (project, Logs) and in Resend (Emails).
 
 ## Navigation
 
@@ -114,4 +129,3 @@ Then open the URL it prints. Clean URLs like `/bakes` work the same as on Vercel
 - Prices and product details on every card.
 - Pickup times and place on `/bakes`.
 - Higher-resolution logo exports (current files are about 600px wide and look soft on retina screens at full size).
-- Contact form opens the visitor's email app addressed to hello@theblazics.com (which forwards to the business Gmail). To receive submissions directly, connect a form service such as Web3Forms: set the form's `action` and access key, remove `data-mailto`, in every page.
