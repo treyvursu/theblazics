@@ -134,7 +134,7 @@
   </div>
 </article>
       <article class="card card--sage reveal">
-  <div class="ph ratio-1x1 ph--sage " data-image="/assets/images/handmade-resin-coasters.jpg" role="img" aria-label="Image placeholder: Add the set size and colors here."><div class="ph__inner"><span class="ph__label">Photo</span><span class="ph__desc">Add the set size and colors here.</span><span class="ph__file">handmade-resin-coasters.jpg</span></div></div>
+  <div class="ph ratio-1x1"><img src="/assets/images/resin-coasters.webp" alt="Six handmade resin coasters: snowflakes, reindeer, a Christmas tree, gingerbreads, red and green with gold flake" width="800" height="800" loading="lazy" decoding="async"></div>
   <div class="card__body">
     <div class="card__top"><h3 class="card__name">Resin coasters</h3><span class="price">$5</span></div>
     <p class="body-sm">Add the set size and colors here.</p>
@@ -288,11 +288,10 @@
   <div class="container contact-us__inner reveal">
     <h2 class="contact-us__title">Contact Us</h2>
     <p class="contact-us__sub"><span>Custom orders. Suggestions. Feedback.</span> <span>We want to hear from you.</span></p>
-    <form class="form contact-us__form" action="/api/contact" method="post">
-      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" maxlength="100" required></div>
-      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
-      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" maxlength="5000" required></textarea></div>
-      <div class="form__hp" aria-hidden="true"><label for="f-company">Company</label><input id="f-company" name="company" tabindex="-1" autocomplete="off"></div>
+    <form class="form contact-us__form" data-mailto="hello@theblazics.com">
+      <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
       <div><button class="btn btn--primary" type="submit">Send message</button></div>
       <p class="form__status" role="status"></p>
     </form>
